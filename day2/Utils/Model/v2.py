@@ -160,6 +160,8 @@ class StepByStep(object):
                 # Performs evaluation using mini-batches
                 val_loss = self._mini_batch(validation=True)
                 self.val_losses.append(val_loss)
+              
+            print("EPOCH: ", epoch, "Training Loss: ", loss, "Validation Loss: ", val_loss) 
 
             # If a SummaryWriter has been set...
             if self.writer:
